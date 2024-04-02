@@ -15,7 +15,7 @@ public class LoginPage {
 	// 1. By Locators - PO - OR
 	private By emailId = By.id("input-email");
 	private By password = By.id("input-password");
-	private By loginButton = By.xpath("//input[@value='Login']");
+	private By loginButton = By.xpath("//button[@type='submit']");
 	private By forgotPwdLink = By.linkText("Forgotten Password");
 	private By registerLink = By.linkText("Register");
 
