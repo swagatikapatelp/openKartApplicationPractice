@@ -45,13 +45,18 @@ public class LoginPageTest extends BaseTest {
 	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	public void registerLinkTest() {
-		Assert.assertTrue(loginPage.isRegisterlinkExist());
+		if (loginPage.isRegisterlinkExist()) {
+			Assert.assertTrue(loginPage.isRegisterlinkExist());
+		} else {
+			Assert.assertTrue(loginPage.isRegisterlinkExist());
+		}
 	}
 
 	@Description("login page test....")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test
 	public void loginTest() {
+		System.out.println("Entering username and password");
 		loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 	}
 
